@@ -1,6 +1,9 @@
 package fr.univ_orleans.iut45.menus;
 
 import java.util.List;
+import java.io.Reader;
+
+import com.google.gson.Gson;
 
 class Menu {
     protected List<Plat> entrees;
@@ -26,4 +29,10 @@ class Menu {
     public List<Plat> getDesserts() {
         return this.desserts;
     }
+
+    public static Menu fromJson(Reader r) {
+        Gson gson = new Gson();
+        return gson.fromJson(r, Menu.class);
+    }
+
 }

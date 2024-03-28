@@ -1,6 +1,8 @@
 package fr.univ_orleans.iut45.menus;
 
 import java.util.List;
+import com.google.gson.Gson;
+import java.io.Reader;
 
 class Plat {
     protected String nom;
@@ -21,4 +23,10 @@ class Plat {
     public double prixDeRevient() {
         return this.prix_de_revient;
     }
+
+    public static Plat fromJson(Reader r) {
+        Gson gson = new Gson();
+        return gson.fromJson(r, Plat.class);
+    }
+
 }

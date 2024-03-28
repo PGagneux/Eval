@@ -1,0 +1,32 @@
+{
+    "entrees": [
+    {
+        "nom": "carottes râpées",
+        "contient_viande": false,
+        "allergenes": ["moutarde"],
+        "prix_de_revient": 0.5
+    }
+    ],
+    "plats_principaux": [
+    {
+        "nom": "Chili Sin Carne",
+        "contient_viande": false,
+        "allergenes": ["soja", "moutarde"],
+        "prix_de_revient": 3.5
+    }
+    ],
+    "desserts": [
+    {
+        "nom": "Banane",
+        "contient_viande": false,
+        "allergenes": [],
+        "prix_de_revient": 0.2
+    },
+    {
+        "nom": "Paris-Brest",
+        "contient_viande": false,
+        "allergenes": ["noisette", "gluten"],
+        "prix_de_revient": 1.5
+    }
+    ]
+}
