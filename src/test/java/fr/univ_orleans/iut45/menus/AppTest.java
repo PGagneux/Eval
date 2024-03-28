@@ -6,6 +6,8 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
 
@@ -61,4 +63,15 @@ public class AppTest
         assertTrue(ce_soir.estComplet());
     }
 
+    @Test
+    public void testCouMinimum(){
+        List<Plat> entrees = Arrays.asList(new Plat("carottes râpées",false,null,0.5));
+        List<Plat> plats = Arrays.asList(new Plat("Chili Sin Carne",false,null, 3.5));
+        List<Plat> dessert = Arrays.asList(new Plat("Banane",false,null,0.2),
+                                            new Plat("Paris-Brest", false, null, 1.5));
+        Menu ce_midi = new Menu(entrees,plats,dessert);
+        assertEquals(4.2, ce_midi.couMinimum());
+    }
+
 }
+
